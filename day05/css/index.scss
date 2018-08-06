@@ -1,0 +1,64 @@
+/* 新闻部分开始 */
+
+.news {
+    /* 全部新闻大标题部分开始 */
+    .news_all {
+        font-size: 30px;
+        border-bottom: 1px solid #000;
+        &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -5px;
+            right: 5px;
+        }
+    }
+    /* 全部新闻大标题部分结束 */
+    /* 新闻标签开始 */
+        .news_title {
+            ul {
+                border: none;
+                li {
+                    margin-bottom: 40px;
+                    a {
+                        display: inline-block;
+                        background-color: #ccc;
+                        border-radius: 50%;
+                        .wjsfont {
+                            font-size: 60px;   
+                            color: #fff;
+                        }
+                    }
+                    
+                    a:link {
+                        background-color: #ccc;
+                    }
+                    a:visited {
+                        background-color: #ccc;
+                    }
+                    a:hover {
+                        background-color: red;
+                    }
+                } 
+            }
+            
+        }
+    /* 新闻标签结束 */
+    /* 新闻内容开始 */
+    .news_contnet {
+        ul {
+            margin-top: 14px;
+        }
+        #profile {
+            img {
+                width: 400px;
+            }
+        }
+    }
+    /* 新闻内容结束 */
+}
+
+/* 新闻部分结束 */

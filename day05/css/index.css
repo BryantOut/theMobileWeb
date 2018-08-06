@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* 新闻部分开始 */
+.news {
+  /* 全部新闻大标题部分开始 */
+  /* 全部新闻大标题部分结束 */
+  /* 新闻标签开始 */
+  /* 新闻标签结束 */
+  /* 新闻内容开始 */
+  /* 新闻内容结束 */
+}
+
+.news .news_all {
+  font-size: 30px;
+  border-bottom: 1px solid #000;
+}
+
+.news .news_all::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -5px;
+  right: 5px;
+}
+
+.news .news_title ul {
+  border: none;
+}
+
+.news .news_title ul li {
+  margin-bottom: 40px;
+}
+
+.news .news_title ul li a {
+  display: inline-block;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.news .news_title ul li a .wjsfont {
+  font-size: 60px;
+  color: #fff;
+}
+
+.news .news_title ul li a:link {
+  background-color: #ccc;
+}
+
+.news .news_title ul li a:visited {
+  background-color: #ccc;
+}
+
+.news .news_title ul li a:hover {
+  background-color: red;
+}
+
+.news .news_contnet ul {
+  margin-top: 14px;
+}
+
+.news .news_contnet #profile img {
+  width: 400px;
+}
+
+/* 新闻部分结束 */
+/*# sourceMappingURL=index.css.map */
