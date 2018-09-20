@@ -911,13 +911,47 @@ div.addEventListener("touchend",function (e) {
 @media screen and (max-width:300px) {
   html {
     font-size: 50px;
-
   }
 }
 .px {
   font-size: 0.48rem;
 }
 </style>
+```
+
+### 6.3.3 rem布局步骤
+
+>  让根元素的字体与屏幕宽度产生关系，即随屏幕宽度变化而变化
+
+```js
+onload = function () {
+  init()
+  function init () {
+    setHTML()
+  }
+
+  // 根据屏幕的宽度动态设置html标签的fontsize
+  function setHTML () {
+    // 设计稿的宽度 / 基础值 = 要适配的屏幕的宽度 / fz
+    // fz = 要适配的屏幕的宽度*基础值/设计稿的宽度
+
+    // 基础值
+    var baseVal = 100
+    // 设计稿的宽度
+    var pageWidth = 750
+    // 当前屏幕的宽度
+    var screenWidth = document.querySelector('html').offsetWidth
+    // 要设置的fontsize
+    var fz = screenWidth * baseVal / pageWidth
+
+    // 赋值给HTML标签
+    document.querySelector('html').style.fontSize = fz + 'px'
+  }
+
+  window.onresize = function () {
+    setHTML()
+  }
+}
 ```
 
 ## 6.4  移动端的页面适配方案
@@ -943,7 +977,6 @@ div.addEventListener("touchend",function (e) {
 @media screen and (max-width:300px) {
   html {
     font-size: 50px;
-
   }
 }
 /*div中的单位都使用rem
